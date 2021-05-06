@@ -1,0 +1,650 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Krona+One&family=Overpass:wght@700&display=swap');
+	html{
+		scroll-behavior: smooth;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	body{
+		font-family: Archivo Narrow;
+	}
+	#remote{
+		width: 80px;
+		height: 350px;
+		background: black;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		z-index: 9999;
+		border-radius: 10px;
+		padding-top: 20px;
+	}
+	#remote div{
+		width: 80px;
+		height: 70px;
+		font-size: 13px;
+		text-align: center;
+		color: #ccc;
+		transition: 0.3s;
+		position: relative;
+	}
+	#remote a:nth-child(1) div:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		width: 40px;
+		height: 1px;
+		background: #ccc;
+		top: 50px;
+		left: 25%;
+	}
+	#remote div:hover{
+		color: white;
+	}
+	header{
+		width: 100%;
+		height: 50px;	
+		position: fixed;
+		top: 0;
+		left: 0;
+		font-size: 11px;
+		background: #0e3882;
+		color: white;
+		z-index: 9999;
+	}
+	header nav{
+		width: 1200px;
+		margin: 0 auto;
+		line-height: 50px;
+		text-align: center;
+	}
+	header nav ul{
+		float: left;
+	}
+	header nav ul li{
+		float: left;
+		width: 100px;
+		height: 50px;
+		position: relative;
+	}
+	header nav ul li:after{
+		content: "";
+		display: block;
+		clear: both;
+		width: 0px;
+		height: 2px;
+		background: white;
+		position: absolute;
+		top: 48px;
+		left: 0;
+	}
+	header nav ul .head_menu1_li:hover:after{
+		width: 100px;
+		transition: 0.3s;
+	}
+	#submenu{
+		width: 470px;
+		height: 200px;
+		padding: 20px;
+		background: white;
+		display: none;
+		box-shadow: 1px 1px 15px gray;
+	}
+	.head_menu1_li:hover #submenu{
+		display: block;
+	}
+	.head_submenu{
+		float: left;
+	}
+	.head_submenu li{
+		height: 35px;
+		width: 150px;
+		float: none;
+		text-align: left;
+	}
+	.head_submenu li a{
+		font-size: 14px;
+		color: #999999;
+	}
+	.head_submenu li a:hover{
+		color: #0e3882;
+	}
+	#head_menu1 li ul img{
+		width: 160px;
+		height: auto;
+	}
+	header nav #logo{
+		float: left;
+		width: 500px;
+		font-size: 17px;
+	}
+	/*--------------------mainimg---------------------*/
+	#mainimg{
+		margin-top: 40px;
+		width: 100%;
+		height: 792px;
+		position: relative;
+		z-index: 999;
+	}
+	#mainimg div{
+		float: left;
+		width: 33.3333%;
+	}
+	#mainimg div img{
+		width: 100%;
+		height: auto;
+		filter: brightness(70%);
+	}
+	#mainimg div img:hover{
+		filter: brightness(100%);
+	}
+	/*--------------------pbmagazine---------------------*/
+	#pbmagazine{
+		margin-top: 100px;
+		width: 100%;
+		height: 700px;
+	}
+	#pbmagazine_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#pbmagazine_content p a{
+		color: black;		
+		font-size: 20px;
+	}
+	#pbmagazine_content p .showmore{
+		font-size: 13px;
+		float: right;
+		margin-right: 20px;
+	}
+	#pbmagazine_content p .showmore:after{
+		content: "";
+		display: block;
+		clear: both;
+		width: 68px;
+		height: 2px;
+		background: black;
+	}
+	.pbmagagin_img{
+		width: 380px;
+		height: 500px;
+		float: left;
+		margin-right: 20px;
+		position: relative;
+	}
+	#pbmagazine_content .pbmagagin_img p a:hover{
+		text-decoration: underline;
+	}
+	#pbmagazine_content .pbmagagin_img p:nth-child(2) a{
+		font-size: 13px;
+		font-weight: 400;
+	}
+	.pbmagagin_img:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		width: 380px;
+		height: 0px;
+		background: linear-gradient(to bottom,
+			rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%);
+		opacity: 30%;
+	}
+	.pbmagagin_img:hover:after{
+		height: 400px;
+		transition: 0.1s;
+	}
+	#pbmagagin_img1{
+		background:url("생식빵.jpg");
+		background-size: cover;	
+	}
+	#pbmagagin_img2{
+		background: url("당근빵.jpg") center center;
+		background-size: 160%;
+	}
+	#pbmagagin_img3{
+		background: url("감자빵.jpg") center center;
+		background-size: 130%;
+	}
+	#pbmagazine_content .pbmagagin_img p a{
+		color: white;
+		margin: 30px;
+		position: relative;
+		z-index: 999;
+		top: 370px;
+	}
+	/*---------------------------pbstory--------------------------*/
+	#pbstory{
+		margin-top: 100px;
+		width: 100%;
+		height: 800px;
+	}
+	#pbstory_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#pbstory_content p a{
+		color: black;		
+		font-size: 20px;
+	}
+	#pbstory_content p .showmore{
+		font-size: 13px;
+		float: right;
+		margin-right: 20px;
+	}
+	#pbstory_content p .showmore:after{
+		content: "";
+		display: block;
+		clear: both;
+		width: 68px;
+		height: 2px;
+		background: black;
+	}
+	#pbstory_content .pbstory_box{
+		width: 585px;
+		height: 350px;
+		float: left;
+		margin: 0 10px 10px 0px;
+	}
+	.pbstory_box div{
+		float: left;
+	}
+	.pbstory_box .pbstory_box_text{
+		margin-left: 20px;
+	}
+	#pbstory_content .pbstory_box .pbstory_box_text p:nth-child(1) a{
+		color: #0e3882;
+		font-weight: 400;
+		font-size: 12px;
+	}
+	#pbstory_content .pbstory_box .pbstory_box_text p:nth-child(2) a{
+		font-size: 22px;
+		font-weight: 600;
+	}
+	#pbstory_content .pbstory_box .pbstory_box_text p:nth-child(3) a{
+		font-size: 14px;
+		font-weight: 400;
+	}
+	#pbstory_content .pbstory_box .pbstory_box_text p:nth-child(4){
+		font-size: 10px;
+		font-weight: 400;
+	}
+	#pbstory_content .pbstory_box .pbstory_box_text p a:hover{
+		text-decoration: underline;
+	}
+	.pbstory_box_img{
+		width: 300px;
+		height: 300px;
+		position: relative;
+	}
+	.pbstory_box_img:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		width: 300px;
+		height: 0px;
+		background: linear-gradient(to bottom,
+			rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%);
+		opacity: 30%;
+	}
+	.pbstory_box_img:hover:after{
+		height: 300px;
+		transition: 0.1s;
+	}
+	#pbstory_box1_img{		
+		background: url("77.jpg");
+		background-size: cover;
+	}
+	#pbstory_box2_img{
+		background: url("88.jpg");
+		background-size: cover;
+	}
+	#pbstory_box3_img{
+		background: url("99.jpg");
+		background-size: cover;
+	}
+	#pbstory_box4_img{
+		background: url("1010.jpg");
+		background-size: cover;
+	}
+	/*---------------------------promotion--------------------------*/
+	#promotion{
+		width: 100%;
+		height: 500px;
+	}
+	#promotion_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#promotion_content p a{
+		color: black;		
+		font-size: 20px;
+	}
+	#promotion_content p .showmore{
+		font-size: 13px;
+		float: right;
+		margin-right: 20px;
+	}
+	#promotion_content p .showmore:after{
+		content: "";
+		display: block;
+		clear: both;
+		width: 68px;
+		height: 2px;
+		background: black;
+	}
+	#promotion_content .promotion_box{
+		width: 285px;
+		height: 380px;
+		float: left;
+		margin-right: 15px;
+	}
+	.promotion_box_img{
+		width: 285px;
+		height: 285px;
+		position: relative;
+	}
+	#promotion_content .promotion_box .promotion_box_text p{
+		line-height: 0px;
+	}
+	#promotion_content .promotion_box .promotion_box_text p:nth-child(1){
+		color: #0e3882;
+		font-size: 10px;
+	}
+	#promotion_content .promotion_box .promotion_box_text p:nth-child(2) a{
+		font-size: 19px;
+		line-height: 20px
+	}
+	#promotion_content .promotion_box .promotion_box_text p:nth-child(3) a{
+		font-size: 8px;
+		color: #666;
+	}
+	#promotion_content .promotion_box .promotion_box_text p a:hover{
+		text-decoration: underline;
+	}
+	.promotion_box_img:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		width: 285px;
+		height: 0px;
+		background: linear-gradient(to bottom,
+			rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%);
+		opacity: 30%;
+	}
+	.promotion_box_img:hover:after{
+		height: 285px;
+		transition: 0.1s;
+	}
+	.promotion_box_img:before{
+		content: "진행 중";
+		display: block;
+		clear: both;
+		width: 45px;
+		height: 18px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #0e3882;
+		color: white;
+		font-size: 10px;
+		text-align: center;
+		line-height: 18px;
+	}
+	#promotion_box_img1{
+		background: url(111.jpg);
+		background-size: cover;
+	}
+	#promotion_box_img2{
+		background: url(1414.jpg);
+		background-size: cover;
+	}
+	#promotion_box_img3{
+		background: url(breed.jpg);
+		background-size: cover;
+	}
+	#promotion_box_img4{
+		background: url(1111.jpg);
+		background-size: cover;
+	}
+	/*---------------------------products--------------------------*/
+	#products{
+		width: 100%;
+	}
+	#products_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#products_content p a{
+		color: black;		
+		font-size: 20px;
+	}
+	#products_content p .showmore{
+		font-size: 13px;
+		float: right;
+		margin-right: 20px;
+	}
+	#products_content p .showmore:after{
+		content: "";
+		display: block;
+		clear: both;
+		width: 68px;
+		height: 2px;
+		background: black;
+	}
+	.products_box{
+		width: 230px;
+		height: 330px;
+		float: left;
+		margin-right: 10px;
+		position: relative;
+	}
+	.products_box_img{
+		width: 230px;
+		height: 260px;
+	}
+	.products_box p{
+		color: black;
+		font-size: 13px;
+		margin-top: 40px;
+	}
+	.products_box p:hover{
+		text-decoration: underline;
+	}
+	.products_box:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		z-index: 99;
+		bottom: 70px;
+		width: 230px;
+		height: 0px;
+		background: linear-gradient(to bottom,
+			rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%);
+		opacity: 30%;
+	}
+	.products_box:hover:after{
+		height: 290px;
+	}
+	#products_box_img1{
+		background: url(1515.jpg);
+		background-size: cover;
+	}
+	#products_box_img2{
+		background: url(1616.jpg);
+		background-size: cover;
+	}
+	#products_box_img3{
+		background: url(1717.jpg);
+		background-size: cover;
+	}
+	#products_box_img4{
+		background: url(1818.jpg);
+		background-size: cover;
+	}
+	#products_box_img5{
+		background: url(1919.jpg);
+		background-size: cover;
+	}
+	/*---------------------------insta--------------------------*/
+	#insta{
+		padding-top: 100px;
+		width: 100%;
+		height: 500px;
+	}
+	#insta{
+		width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#insta p{
+		color: black;
+		line-height: 20px;
+	}
+	#insta p:nth-child(1) a{
+		color: black;
+		font-size: 35px;
+	}
+	/*---------------------------insta--------------------------*/
+	#servicecenter{
+		margin-top: -200px;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
+	.service_box{
+		float: left;
+		width: 33.259%;
+		height: 120px;
+		border-right: 1px solid black;
+		position: relative;
+	}
+	.service_box_box{
+		float: left;
+		padding-left: 30px;
+	}
+	.service_box_box p:nth-child(1){
+		color: #0e3882;
+		font-size: 12px;
+	}
+	.service_box_box p:nth-child(2){
+		font-weight: bold;
+	}
+	.service_box_pointer{
+		float: right;
+		width: 100px;
+		height: 120px;
+		text-align: center;
+		font-size: 60px;
+		line-height: 0;
+	}
+	.service_box:after{
+		content: "";
+		display: block;
+		clear: both;
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		width: 100%;
+		height: 120px;
+		background: linear-gradient(to bottom,
+			rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.1) 25%,
+            rgba(20, 20, 20, 0.2) 50%,
+            rgba(20, 20, 20, 0.3) 75%,
+            rgba(20, 20, 20, 0.4) 100%);
+		opacity: 0%;
+	}
+	.service_box:hover:after{
+		cursor: pointer;
+		opacity: 100%;
+		transition: 0.5s;		
+	}
+	/*---------------------------footer--------------------------*/
+	footer{
+		margin-top: -80px;
+		width: 100%;
+		height: 400px;
+		background: #464a56;
+		position: relative;
+	}
+	#footer_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#footsec1 .footsec1_box{
+		width: 300px;
+		height: 250px;
+		float: left;
+		margin-top: 50px;
+	}
+	#footsec1 .footsec1_box p:nth-child(1){
+		color: white;
+		font-size: 30px;
+	}
+	#footsec1 .footsec1_box p{
+		font-size: 13px;
+	}
+	#footsec1 .footsec1_box p a:hover{
+		text-decoration: underline;
+	}
+	#footsec2{
+		position: absolute;
+		bottom: 0;
+		left: 38.33%;
+		text-align: center;;
+	}
+	#footsec2 p{
+		color: white;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	#footsec2 p span{
+		color: red;
+	}
+	#footsecc2_box{
+		width: 100%;
+		height: 30px;
+		background: #464a56;
+		border-top: 1px solid white;
+		text-align: center;
+	}
+	#footsecc2_box p{
+		font-size: 9px;
+		color: #666;
+	}
+	
